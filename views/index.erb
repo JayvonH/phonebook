@@ -10,3 +10,21 @@
 <input type= "text" name = "work_phone"> work phone
 <input type= "submit" value = "Submit">
 </form>
+<table>
+	<thead>
+		<tr>
+			<th>first name</th>
+			<th>last name</th>
+			<th>street address</th>
+			<th>city</th>
+			<th>state</th>
+			<th>zip</th>
+			<th>cell phone</th>
+			<th>home phone</th>
+			<th>work phone</th>
+		</tr>
+	</thead>
+	<tbody>
+			<%phonebook.each do |contacts| %>
+			<%=contacts%>
+			<%end%>
