@@ -1,18 +1,18 @@
-<form action= "/phonebook" method = "post">
-<input type= "text" name = "first_name"> first name
-<input type= "text" name = "last_name"> last name
-<input type= "text" name = "street_address"> street adress
-<input type= "text" name = "city"> city
-<input type= "text" name = "state"> state
-<input type= "text" name = "zip"> zip
-<input type= "text" name = "cell_phone"> cell phone
-<input type= "text" name = "home_phone"> home phone
-<input type= "text" name = "work_phone"> work phone
+<link href="css/styles.css" rel= "stylesheet"> <form action="/phonebook" method = "post">
+<input type= "text" name = "first_name"> First Name
+<input type= "text" name = "last_name"> Last Name
+<input type= "text" name = "street_address"> Street Address
+<input type= "text" name = "city"> City
+<input type= "text" name = "state"> State
+<input type= "text" name = "zip"> Zipcode
+<input type= "text" name = "cell_phone"> Cell phone
+<input type= "text" name = "home_phone"> Home phone
+<input type= "text" name = "work_phone"> Work phone
 <input type= "submit" value = "Submit">
 </form>
-<table>
 	<thead>
 		<tr>
+		<tbody>
 			<th>first name</th>
 			<th>last name</th>
 			<th>street address</th>
@@ -24,7 +24,19 @@
 			<th>work phone</th>
 		</tr>
 	</thead>
-	<tbody>
+	</tbody>
 			<%phonebook.each do |contacts| %>
-			<%=contacts%>
+			
+
+			<tr>
+				<td><%=contacts["first_name"]%></td>
+				<td><%=contacts["last_name"]%></td>
+				<td><%=contacts["street_address"]%></td>
+				<td><%=contacts["city"]%></td>
+				<td><%=contacts["state"]%></td>
+				<td><%=contacts["zip"]%></td>
+				<td><%=contacts["cell_phone"]%></td>
+				<td><%=contacts["home_phone"]%></td>
+				<td><%=contacts["work_phone"]%></td>
+			
 			<%end%>
